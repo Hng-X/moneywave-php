@@ -9,183 +9,184 @@
 namespace Moneywave;
 
 
-class Bank {
+class Bank
+{
     /**
-FIRST CITY MONUMENT BANK PLC
-     * 
+     * FIRST CITY MONUMENT BANK PLC
+     *
      */
     static $FCMB = "214";
 
 
     /**
-    UNITY BANK PLC
+     * UNITY BANK PLC
      *
      */
-static $UNITY = "215";
-    
-    /**
-STANBIC IBTC BANK PLC
- *
- */
-static $STANBIC_IBTC  = "221";
+    static $UNITY = "215";
 
     /**
-    STERLING BANK PLC
+     * STANBIC IBTC BANK PLC
      *
      */
-static $STERLING = "232";
+    static $STANBIC_IBTC = "221";
 
     /**
-    STANBIC Mobile PLC
+     * STERLING BANK PLC
      *
      */
-static $STANBIC_MOBILE= "304";
+    static $STERLING = "232";
 
     /**
-    PAYCOM
+     * STANBIC Mobile PLC
      *
      */
-static $PAYCOM = "305";
+    static $STANBIC_MOBILE = "304";
 
     /**
-    ECOBANK MOBILE
+     * PAYCOM
      *
      */
-static $ECOBANK_MOBILE = "307";
+    static $PAYCOM = "305";
 
     /**
-FBN MOBILE
- *
- */
-static $FBN_MOBILE = "309";
-
-    /**
-    PARKWAY
+     * ECOBANK MOBILE
      *
      */
-static $Parkway = "311";
+    static $ECOBANK_MOBILE = "307";
 
     /**
-    GTBank Mobile Money
+     * FBN MOBILE
      *
      */
-static $GTBANK_MOBILE= "315";
+    static $FBN_MOBILE = "309";
 
     /**
-    ZENITH Mobile
+     * PARKWAY
      *
      */
-static $ZENITH_MOBILE = "322";
+    static $Parkway = "311";
 
     /**
-    ACCESS Mobile
+     * GTBank Mobile Money
      *
      */
-static $ACCESS_MOBILE = "323";
+    static $GTBANK_MOBILE = "315";
 
     /**
-    Aso Savings and Loans
+     * ZENITH Mobile
      *
      */
-static $ASO = "401";
+    static $ZENITH_MOBILE = "322";
 
     /**
-    ACCESS BANK NIGERIA
+     * ACCESS Mobile
      *
      */
-static $ACCESS = "044";
+    static $ACCESS_MOBILE = "323";
 
     /**
-    AFRIBANK NIGERIA PLC
+     * Aso Savings and Loans
      *
      */
-static $AFRIBANK= "014";
+    static $ASO = "401";
 
     /**
-    DIAMOND BANK PLC
+     * ACCESS BANK NIGERIA
      *
      */
-static $DIAMOND = "063";
+    static $ACCESS = "044";
 
     /**
-    ECOBANK NIGERIA PLC
+     * AFRIBANK NIGERIA PLC
      *
      */
-static $ECOBANK = "050";
+    static $AFRIBANK = "014";
 
     /**
-    ENTERPRISE BANK LIMITED
+     * DIAMOND BANK PLC
      *
      */
-static $ENTERPRISE  = "084";
+    static $DIAMOND = "063";
 
     /**
-    FIDELITY BANK PLC
+     * ECOBANK NIGERIA PLC
      *
      */
-static $FIDELITY = "070";
+    static $ECOBANK = "050";
+
+    /**
+     * ENTERPRISE BANK LIMITED
+     *
+     */
+    static $ENTERPRISE = "084";
+
+    /**
+     * FIDELITY BANK PLC
+     *
+     */
+    static $FIDELITY = "070";
 
 
     /**
-    FIRST BANK PLC
+     * FIRST BANK PLC
      *
      */
-static $FIRST= "011";
-
-/**
-GTBANK PLC
- *
- */
-static $GTBANK= "058";
-
-/**
-HERITAGE BANK
- *
- */
-static $HERITAGE = "030";
-
-/**
-KEYSTONE BANK PLC
- *
- */
-static $KEYSTONE = "082";
-
-
-/**
-SKYE BANK PLC
- *
- */
-static $SKYE = "076";
-
-/**
-STANDARD CHARTERED BANK NIGERIA LIMITED
- *
- */
-static $STANDARD_CHARTERED= "068";
-
-
-/**
-UNION BANK OF NIGERIA PLC
- *
- */
-static $UNION = "032";
-
-   /**
-   UNITED BANK FOR AFRICA PLC
-    *
-    */
-static $UBA = "033";
-
-     /**
-     WEMA BANK PLC
-      *
-      */
-static $WEMA = "035";
+    static $FIRST = "011";
 
     /**
-    ZENITH BANK PLC
+     * GTBANK PLC
      *
      */
-static $ZENITH = "057";
+    static $GTBANK = "058";
+
+    /**
+     * HERITAGE BANK
+     *
+     */
+    static $HERITAGE = "030";
+
+    /**
+     * KEYSTONE BANK PLC
+     *
+     */
+    static $KEYSTONE = "082";
+
+
+    /**
+     * SKYE BANK PLC
+     *
+     */
+    static $SKYE = "076";
+
+    /**
+     * STANDARD CHARTERED BANK NIGERIA LIMITED
+     *
+     */
+    static $STANDARD_CHARTERED = "068";
+
+
+    /**
+     * UNION BANK OF NIGERIA PLC
+     *
+     */
+    static $UNION = "032";
+
+    /**
+     * UNITED BANK FOR AFRICA PLC
+     *
+     */
+    static $UBA = "033";
+
+    /**
+     * WEMA BANK PLC
+     *
+     */
+    static $WEMA = "035";
+
+    /**
+     * ZENITH BANK PLC
+     *
+     */
+    static $ZENITH = "057";
 
 }

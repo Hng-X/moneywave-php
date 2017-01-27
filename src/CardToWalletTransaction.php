@@ -3,16 +3,15 @@
  * Created by PhpStorm.
  * User: J
  * Date: 27/01/2017
- * Time: 14:33
+ * Time: 14:54
  */
 
 namespace Moneywave;
 
 
-class CardToAccountTransaction extends Transaction
+class CardToWalletTransaction extends Transaction
 {
-
-    protected $url = "/v1/transfer";
+    protected $url = " /v1/transfer";
 
     protected $data = array();
 
@@ -24,8 +23,7 @@ class CardToAccountTransaction extends Transaction
             "lastname" => "",
             "phonenumber" => "",
             "email" => "",
-            "recipient_bank" => "",
-            "recipient_account_number" => "",
+            "recipient" => "wallet",
             "card_no" => "",
             "cvv" => "",
             "expiry_year" => "",

@@ -3,13 +3,14 @@
 namespace Moneywave;
 
 
-class Transaction {
+class Transaction
+{
 
     protected $moneywave;
 
     protected $status;
 
-    protected $url ="";
+    protected $url = "";
 
     protected $data = array();
     protected $responseCode;
@@ -21,21 +22,22 @@ class Transaction {
     }
 
     public function __get($key)
-{
-    if(array_key_exists($key, $this->data)) {
-        return $this->data[$key];
+    {
+        if (array_key_exists($key, $this->data)) {
+            return $this->data[$key];
+        }
     }
-}
 
     public function __set($key, $value)
     {
-        if(array_key_exists($key, $this->data)) {
+        if (array_key_exists($key, $this->data)) {
             $this->data[$key] = $value;
         }
     }
 
 
-    public function dispatch() {
+    public function dispatch()
+    {
         $result = $this->mw->post($this->url, $this->data);
         $response = json_decode($result->getBody(), true);
         $this->response = $response;
@@ -45,7 +47,7 @@ class Transaction {
 
     public function getFullResponse()
     {
-       return $this->response;
+        return $this->response;
     }
 
     public function getStatus()

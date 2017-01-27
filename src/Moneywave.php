@@ -25,14 +25,14 @@ class Moneywave
             'base_uri' => $this->baseUrl,
         ]);
         $this->accessToken = $this->getAccessToken();
-        if($this->accessToken) {
-            $authBearer = 'Bearer '. $this->accessToken;
+        if ($this->accessToken) {
+            $authBearer = 'Bearer ' . $this->accessToken;
             $this->client = new Client([
-                'base_uri'  =>  $this->baseUrl,
-                'header'    =>  [
+                'base_uri' => $this->baseUrl,
+                'header' => [
                     'Authorization' => $authBearer,
-                    'Content-Type'  => 'application/json',
-                    'Accept'        => 'application/json'
+                    'Content-Type' => 'application/json',
+                    'Accept' => 'application/json'
                 ]
             ]);
         }
@@ -43,7 +43,7 @@ class Moneywave
     */
     private function getAccessToken()
     {
-        $request = new Request('POST', '/v1/merchant/verify',array(
+        $request = new Request('POST', '/v1/merchant/verify', array(
             'form_params' => [
                 "apiKey" => $this->apiKey,
                 "secret" => $this->secretkey]
@@ -51,10 +51,9 @@ class Moneywave
         $response = $this->client->send($request, ['timeout' => 2]);
         $response = json_decode($response->getBody(), true);
 
-        if($response["status"] == "success") {
+        if ($response["status"] == "success") {
             return $response['token'];
-        }
-        else{
+        } else {
             return false;
         }
     }
@@ -74,14 +73,14 @@ class Moneywave
      */
     private function setHttpResponse($relativeUrl, $method, $body = [])
     {
-        if(is_null($method)){
+        if (is_null($method)) {
             throw new isNullException("Empty method not allow");
         }
-        $authBearer = 'Bearer '. $this->getAccessToken();
+        $authBearer = 'Bearer ' . $this->getAccessToken();
         $this->client->{strtolower($method)}("https://moneywave.herokuapp.com/v1/transfer",
             [
-                "form_params"   =>  $body,
-                "header"    =>  [ 'Authorization' => $authBearer ]
+                "form_params" => $body,
+                "header" => ['Authorization' => $authBearer]
             ]
         );
     }

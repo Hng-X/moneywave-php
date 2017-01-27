@@ -9,7 +9,8 @@
 namespace Moneywave;
 
 
-class ChargeToCardTransaction extends Transaction{
+class ChargeToCardTransaction extends Transaction
+{
 
     protected $url = "/v1/get-charge";
     protected $data = array();
