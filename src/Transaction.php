@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: J
- * Date: 27/01/2017
- * Time: 14:10
- */
 
 namespace Moneywave;
 
@@ -18,6 +12,8 @@ class Transaction {
     protected $url ="";
 
     protected $data = array();
+    protected $responseCode;
+    private $response;
 
     public function __construct(Moneywave $moneywave)
     {
@@ -40,8 +36,28 @@ class Transaction {
 
 
     public function dispatch() {
-        $response = $this->mw->post($this->url, $this->data);
-        $response = json_decode($response, true);
-        return $response;
+        $result = $this->mw->post($this->url, $this->data);
+        $response = json_decode($result->getBody(), true);
+        $this->response = $response;
+        $this->responseCode = $result->getStatusCode();
+        $this->status = $response["status"];
+    }
+
+    public function getFullResponse()
+    {
+       return $this->response;
+    }
+
+    public function getStatus()
+    {
+        return array(
+            "status" => $this->status,
+            "code" => $this->responseCode,
+        );
+    }
+
+    public function successful()
+    {
+        return $this->status == "success";
     }
 }
