@@ -36,7 +36,7 @@ $tran->setDetails(array(
 //make the transaction
 $tran->dispatch();
 
-//note: "success" is as defined by moneywave, see
+//note: "success" is as defined by moneywave
 if($tran->successful()) {
     //yay!
 } else {
@@ -62,7 +62,8 @@ BulkWalletToAccountTransaction
 ```
 GetWalletBalance
 PreviousCardToAccount
-PreviousWalletToAccountRetryFailedTransaction
+PreviousWalletToAccount
+RetryFailedTransaction
 ValidateAccountNumber
 ```
 
