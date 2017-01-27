@@ -49,7 +49,7 @@ class Moneywave
     private function getAccessToken()
     {
         $response = $this->client->post('/v1/merchant/verify', [
-            'form_params' => [
+            'json' => [
                 "apiKey" => $this->apiKey,
                 "secret" => $this->secretkey]
         ]);
