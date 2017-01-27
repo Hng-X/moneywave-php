@@ -38,7 +38,7 @@ class Transaction
 
     public function dispatch()
     {
-        $result = $this->mw->post($this->url, $this->data);
+        $result = $this->moneywave->post($this->url, $this->data);
         $response = json_decode($result->getBody(), true);
         $this->response = $response;
         $this->responseCode = $result->getStatusCode();
