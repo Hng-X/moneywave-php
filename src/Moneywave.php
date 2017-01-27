@@ -32,7 +32,7 @@ class Moneywave
                 'base_uri' => $this->baseUrl,
                 'header' => [
                     'Authorization' => $authBearer,
-                    'Content-Type' => 'application/json',
+                    'Content-Type' => 'application/x-www-form-urlencoded',
                     'Accept' => 'application/json'
                 ]
             ]);
@@ -44,12 +44,11 @@ class Moneywave
     */
     private function getAccessToken()
     {
-        $request = new Request('POST', '/v1/merchant/verify', array(
+        $response = $this->client->post('/v1/merchant/verify', [
             'form_params' => [
                 "apiKey" => $this->apiKey,
                 "secret" => $this->secretkey]
-        ));
-        $response = $this->client->send($request, ['timeout' => 2]);
+        ]);
         $response = json_decode($response->getBody(), true);
 
         if ($response["status"] == "success") {
