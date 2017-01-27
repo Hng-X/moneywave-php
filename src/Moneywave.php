@@ -2,6 +2,7 @@
 
 namespace Moneywave;
 
+use Dotenv\Dotenv;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Request;
 use Moneywave\Exceptions\MoneywaveException;
@@ -19,9 +20,12 @@ class Moneywave
      */
     public function __construct()
     {
-        $this->apiKey = env('MONEYWAVE_PUBLIC_KEY');
-        $this->secretkey = env('MONEYWAVE_SECRET_KEY');
-        $this->baseUrl = env('MONEYWAVE_BASE_URL');
+        $dotenv = new Dotenv(__DIR__."/../");
+        $dotenv->load();
+
+        $this->apiKey = getenv('MONEYWAVE_PUBLIC_KEY');
+        $this->secretkey = getenv('MONEYWAVE_SECRET_KEY');
+        $this->baseUrl = getenv('MONEYWAVE_BASE_URL');
         $this->client = new Client([
             'base_uri' => $this->baseUrl,
         ]);
