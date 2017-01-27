@@ -31,11 +31,10 @@ class Moneywave
         ]);
         $this->accessToken = $this->getAccessToken();
         if ($this->accessToken) {
-            $authBearer = 'Bearer ' . $this->accessToken;
             $this->client = new Client([
                 'base_uri' => $this->baseUrl,
                 'header' => [
-                    'Authorization' => $authBearer,
+                    'Authorization' => $this->accessToken,
                     'Content-Type' => 'application/x-www-form-urlencoded',
                     'Accept' => 'application/json'
                 ]
@@ -49,7 +48,7 @@ class Moneywave
     private function getAccessToken()
     {
         $response = $this->client->post('/v1/merchant/verify', [
-            'json' => [
+            'form_params' => [
                 "apiKey" => $this->apiKey,
                 "secret" => $this->secretkey]
         ]);

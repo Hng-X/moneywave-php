@@ -58,7 +58,7 @@ class Bank
      * PARKWAY
      *
      */
-    static $Parkway = "311";
+    static $PARKWAY = "311";
 
     /**
      * GTBank Mobile Money
