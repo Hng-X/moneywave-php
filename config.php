@@ -1,6 +1,7 @@
 <?php
 
 return array(
+
     /**
      * Public Key From Moneywave Dashboard
      *
@@ -17,40 +18,5 @@ return array(
      * Moneywave Payment URL
      *
      */
-    'baseUrl' => "https://moneywave.herokuapp.com/",
-
-    /**
-     *
-     */
-    'redirect_url'  =>  getenv('MONEYWAVE_REDIRECT_URL'),
-    /**
-     * Optional email address of the merchant
-     *
-     */
-    'merchantEmail' => getenv('MERCHANT_EMAIL'),
-
-    /**
-     * Merchant Bank Name
-     */
-    'bank_name'     =>  getenv('MERCHANT_BANK_NAME'),
-    /**
-     * Merchant Account Number
-     */
-    'account_number'    =>  getenv('MERCHANT_ACCOUNT_NUMBER'),
-
-    /**
-     * Merchant Bank Account Name
-     */
-    'account_name'     => getenv('MERCHANT_ACCOUNT_NAME'),
-
-    /**
-     * Merchant Amount to charge customers
-     */
-    'amount'    => getenv('MERCHANT_AMOUNT'),
-
-    /**
-     * Merchant Fee on every transaction
-     */
-    'fee'       => getenv('MERCHANT_FEE'),
-
+    'baseUrl' => getenv('MONEYWAVE_BASE_URL'),
 );
