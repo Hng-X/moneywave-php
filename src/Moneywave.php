@@ -8,7 +8,7 @@ use Moneywave\Exceptions\MoneywaveException;
 
 class Moneywave
 {
-    protected $client;
+    public $client;
     private $apiKey;
     private $secretkey;
     private $baseUrl;
