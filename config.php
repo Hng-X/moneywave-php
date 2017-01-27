@@ -17,7 +17,7 @@ return array(
      * Moneywave Payment URL
      *
      */
-    'baseUrl' => getenv('MONEYWAVE_PAYMENT_URL'),
+    'baseUrl' => "https://moneywave.herokuapp.com/",
 
     /**
      *
@@ -51,5 +51,6 @@ return array(
     /**
      * Merchant Fee on every transaction
      */
-    'fee'       => getenv('MERCHANT_FEE')
+    'fee'       => getenv('MERCHANT_FEE'),
+
 );
