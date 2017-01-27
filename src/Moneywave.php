@@ -58,31 +58,4 @@ class Moneywave
         }
     }
 
-
-    public function getBanks()
-    {
-        $banks = $this->client->post("http://moneywave.herokuapp.com/banks", []);
-        return json_decode($banks->getBody(), true);
-    }
-
-    /**
-     * @param $relativeUrl
-     * @param $method
-     * @param array $body
-     * @throws isNullException
-     */
-    private function setHttpResponse($relativeUrl, $method, $body = [])
-    {
-        if (is_null($method)) {
-            throw new isNullException("Empty method not allow");
-        }
-        $authBearer = 'Bearer ' . $this->getAccessToken();
-        $this->client->{strtolower($method)}("https://moneywave.herokuapp.com/v1/transfer",
-            [
-                "form_params" => $body,
-                "header" => ['Authorization' => $authBearer]
-            ]
-        );
-    }
-
 }

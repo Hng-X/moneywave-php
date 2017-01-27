@@ -62,4 +62,9 @@ class Transaction
     {
         return $this->status == "success";
     }
+
+    public function setDetails(array $data)
+    {
+        $this->data = $data;
+    }
 }
