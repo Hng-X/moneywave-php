@@ -60,37 +60,12 @@ class Moneywave
     }
 
 
-    public function getListOfBanks()
+    public function getBanks()
     {
         $banks = $this->client->post("http://moneywave.herokuapp.com/banks", []);
         return json_decode($banks->getBody(), true);
     }
 
-    public function makePaymentRequest()
-    {
-        //get expire month/year
-        $expiry = explode('/', request()->cardExpiry);
-        $data = [
-            "firstname"                 =>  request()->firstname,
-            "lastname"                  =>  request()->lastname,
-            "phonenumber"               =>  request()->phonenumber,
-            "email"                     =>  request()->email,
-            "card_no"                   =>  request()->cardNumber,
-            "cvv"                       =>  request()->cardCVC,
-            "expiry_year"               =>  $expiry[0],
-            "expiry_month"              =>  $expiry[1],
-            "apiKey"                    =>  $this->apiKey,
-            "recipient_bank"            =>  Config::get('moneywave.bank_name'),
-            "recipient_account_number"  =>  Config::get('moneywave.account_number'),
-            "amount"                    =>  intval( Config::get('moneywave.amount') ),
-            "fee"                       =>  intval( Config::get('moneywave.fee') ),
-            "redirecturl"               =>  Config::get('moneywave.redirect_url'),
-            "medium"                    =>  "web"
-        ];
-        array_filter($data);
-//        dd($data);
-        $this->setHttpResponse('/v1/transfer', 'POST', $data);
-    }
     /**
      * @param $relativeUrl
      * @param $method
