@@ -99,3 +99,9 @@ WEMA //  WEMA BANK PLC
 ZENITH //  ZENITH BANK PLC
 
 ```
+
+## Installation
+
+```
+composer require hngx/moneywave-php
+```
