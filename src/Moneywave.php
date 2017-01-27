@@ -19,9 +19,6 @@ class Moneywave
      */
     public function __construct()
     {
-        $dotenv = new Dotenv(__DIR__."/../");
-        $dotenv->load();
-
         $this->apiKey = getenv('MONEYWAVE_PUBLIC_KEY');
         $this->secretkey = getenv('MONEYWAVE_SECRET_KEY');
         $this->baseUrl = getenv('MONEYWAVE_BASE_URL');
@@ -63,6 +60,10 @@ class Moneywave
     public function request($method, $url, $options)
     {
         return $this->client->request($method, getenv("MONEYWAVE_BASE_URL").$url, $options);
+    }
+
+    public function get_client() {
+        return $this->client;
     }
 
 }
