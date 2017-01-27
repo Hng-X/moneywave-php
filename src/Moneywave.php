@@ -18,9 +18,9 @@ class Moneywave
      */
     public function __construct()
     {
-        $this->apiKey = config("apiKey");
-        $this->secretkey = config('secretKey');
-        $this->baseUrl = config("baseUrl");
+        $this->apiKey = env('MONEYWAVE_PUBLIC_KEY');
+        $this->secretkey = env('MONEYWAVE_SECRET_KEY');
+        $this->baseUrl = env('MONEYWAVE_BASE_URL');
         $this->client = new Client([
             'base_uri' => $this->baseUrl,
         ]);
