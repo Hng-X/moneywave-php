@@ -6,17 +6,17 @@ return array(
      * Public Key From Moneywave Dashboard
      *
      */
-    'apiKey' => getenv('MONEYWAVE_PUBLIC_KEY'),
+    'apiKey' => env('MONEYWAVE_PUBLIC_KEY'),
 
     /**
      * Secret Key From Moneywave Dashboard
      *
      */
-    'secretKey' => getenv('MONEYWAVE_SECRET_KEY'),
+    'secretKey' => env('MONEYWAVE_SECRET_KEY'),
 
     /**
      * Moneywave Payment URL
      *
      */
-    'baseUrl' => getenv('MONEYWAVE_BASE_URL'),
+    'baseUrl' => env('MONEYWAVE_BASE_URL', "https://moneywave.herokuapp.com/"),
 );
