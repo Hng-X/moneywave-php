@@ -43,6 +43,9 @@ print_r($tran->getStatus();
 
 //you can access the complete response
 print_r($trans->getResponse());
+
+//check your wallet balance
+$bal=(new GetWalletBalance($mw))->dispatch();
 ```
 ### Availbale Transaction Types
 ```
@@ -55,6 +58,10 @@ BulkWalletToAccountTransaction
 
 ### Availbale Resource Types
 ```
+GetWalletBalance
+PreviousCardToAccount
+PreviousWalletToAccountRetryFailedTransaction
+ValidateAccountNumber
 ```
 
 ### List of banks
