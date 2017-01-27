@@ -4,6 +4,7 @@ namespace Moneywave;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Request;
+use Moneywave\Exceptions\MoneywaveException;
 
 class Moneywave
 {
@@ -54,7 +55,7 @@ class Moneywave
         if ($response["status"] == "success") {
             return $response['token'];
         } else {
-            return false;
+            throw new MoneywaveException("Authentication failed: ".print_r($response));
         }
     }
 
