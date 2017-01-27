@@ -1,17 +1,24 @@
 {
   "name": "hngx/moneywave-php",
-  "description": "PHP wrapper for Moneywave API",
+  "description": "PHP wrapper for the Moneywave API",
   "license": "MIT",
   "keywords": ["Moneywave"],
   "authors": [
     {
       "name": "Shalvah Adebayo",
       "email": "shalvah.adebayo@gmail.com"
+    },
+    {
+      "name": "Stephen Afam-Osemene",
+      "email": "stephenafamo@gmail.com"
+    },
+    {
+      "name": "Ifeoluwa Arowosegbe",
+      "email": "iifeoluwa.ao@gmail.com"
     }
   ],
   "require": {
     "php": ">=5.4",
-    "ext-curl": "*",
     "guzzlehttp/guzzle": "^6.2",
     "vlucas/phpdotenv": "^2.4"
   },
