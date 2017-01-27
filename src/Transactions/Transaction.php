@@ -1,7 +1,9 @@
 <?php
 
-namespace Moneywave;
+namespace Moneywave\Transactions;
 
+
+use Moneywave\Moneywave;
 
 class Transaction
 {

@@ -1,13 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: J
- * Date: 27/01/2017
- * Time: 14:33
- */
 
-namespace Moneywave;
+namespace Moneywave\Transactions;
 
+
+use Moneywave\Moneywave;
 
 class CardToAccountTransaction extends Transaction
 {

@@ -4,7 +4,6 @@ namespace Moneywave;
 
 use Dotenv\Dotenv;
 use GuzzleHttp\Client;
-use GuzzleHttp\Psr7\Request;
 use Moneywave\Exceptions\MoneywaveException;
 
 class Moneywave
