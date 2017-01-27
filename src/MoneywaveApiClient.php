@@ -41,7 +41,7 @@ abstract class MoneywaveApiClient {
 
     public function dispatch($method = "POST")
     {
-        $result = $this->moneywave->client->request($method, getenv("MONEYWAVE_BASE_URL").$this->url, array(
+        $result = $this->moneywave->request($method, $this->url, array(
             "form_params" => $this->data
         ));
         $this->response = json_decode($result->getBody(), true);

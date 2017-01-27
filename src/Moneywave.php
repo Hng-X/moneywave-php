@@ -8,11 +8,11 @@ use Moneywave\Exceptions\MoneywaveException;
 
 class Moneywave
 {
-    public $client;
-    private $apiKey;
-    private $secretkey;
-    private $baseUrl;
-    private $accessToken;
+    protected $client;
+    protected $apiKey;
+    protected $secretkey;
+    protected $baseUrl;
+    protected $accessToken;
 
     /**
      * Moneywave constructor.
@@ -58,6 +58,11 @@ class Moneywave
         } else {
             throw new MoneywaveException("Authentication failed: ".print_r($response));
         }
+    }
+
+    public function request($method, $url, $options)
+    {
+        return $this->client->request($method, getenv("MONEYWAVE_BASE_URL").$url, $options);
     }
 
 }
