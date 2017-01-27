@@ -62,7 +62,7 @@ class Moneywave
         return $this->client->request($method, getenv("MONEYWAVE_BASE_URL").$url, $options);
     }
 
-    public function get_client() {
+    public function getClient() {
         return $this->client;
     }
 

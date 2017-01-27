@@ -1,5 +1,7 @@
 # moneywave-php
 
+PHP wrapper for [the Moneywave API](http;//moneywave.flutterwave.com/api)
+
 ## Usage
 
 ```
