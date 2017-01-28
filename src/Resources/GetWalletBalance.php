@@ -13,7 +13,7 @@ class GetWalletBalance extends Resource{
         parent::__construct($mw);
     }
 
-    public function dispatch($method = "GET")
+    public function dispatch($method = "POsT")
     {
         parent::dispatch("GET");
     }
