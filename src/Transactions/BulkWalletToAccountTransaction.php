@@ -16,7 +16,7 @@ class BulkWalletToAccountTransaction extends Transaction
     {
         parent::__construct($mw);
         $this->data = array(
-            "lock" => "",
+            "lock" => getenv("MONEYWAVE_WALLET_PASSWORD"),
             "recipients" => array(
                 "amount" => "",
                 "bankcode" => "",

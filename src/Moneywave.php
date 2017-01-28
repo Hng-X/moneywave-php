@@ -2,7 +2,6 @@
 
 namespace Moneywave;
 
-use Dotenv\Dotenv;
 use GuzzleHttp\Client;
 use Moneywave\Exceptions\MoneywaveException;
 

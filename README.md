@@ -16,7 +16,6 @@ $mw = new Moneywave();
 $tran = new WalletToAccountTransaction($mw);
 
 //set details
-$tran->lock = "hgot6574kik";
 $tran->amount = 25000;
 $tran->bankcode = Bank::STERLING;
 $tran->accountNumber = "000056050";
