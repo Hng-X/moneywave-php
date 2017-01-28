@@ -7,6 +7,7 @@ PHP wrapper for the [Moneywave API](http;//moneywave.flutterwave.com/api)
 ```
 use Moneywave\Moneywave;
 use Moneywave\Transaction\WalletToAccountTransaction;
+use Moneywave\Resources\GetWalletBalance;
 use Moneywave\Bank;
 
 //Get a moneywave client instance
