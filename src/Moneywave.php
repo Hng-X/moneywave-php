@@ -66,4 +66,8 @@ class Moneywave
         return $this->client;
     }
 
+    public function getToken() {
+        return $this->accessToken;
+    }
+
 }
