@@ -18,16 +18,15 @@ $tran = new WalletToAccountTransaction($mw);
 
 //set details
 $tran->amount = 25000;
-$tran->bankcode = Bank::STERLING;
+$tran->bankcode = Bank::$STERLING;
 $tran->accountNumber = "000056050";
 $tran->senderName = "Johnson";
 $tran->ref = 40;
 
 //or you could do this in a batch
 $tran->setDetails(array(
-  "lock" => "hgot6574kik",
   "amount" => 25000,
-  "bankcode" => Bank::STERLING,
+  "bankcode" => Bank::$STERLING,
   "accountNumber" => "000056050",
   "senderName" => "Johnson",
   "ref" => 40
@@ -44,7 +43,7 @@ print_r($tran->getStatus();
 }
 
 //you can access the complete response
-print_r($trans->getResponse());
+print_r($tran->getResponse());
 
 //check your wallet balance
 $bal=new GetWalletBalance($mw);
