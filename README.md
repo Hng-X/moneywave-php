@@ -47,7 +47,9 @@ print_r($tran->getStatus();
 print_r($trans->getResponse());
 
 //check your wallet balance
-$bal=(new GetWalletBalance($mw))->dispatch();
+$bal=new GetWalletBalance($mw);
+$bal->dispatch();
+print_r($bal->getResponse());
 ```
 ### Available Transaction Types
 ```

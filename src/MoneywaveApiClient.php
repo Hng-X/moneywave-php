@@ -50,7 +50,7 @@ abstract class MoneywaveApiClient {
         $this->status = $this->response["status"];
     }
 
-    public function getFullResponse()
+    public function getResponse()
     {
         return $this->response;
     }
