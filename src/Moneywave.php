@@ -69,4 +69,8 @@ class Moneywave
         return $this->accessToken;
     }
 
+    public function getApiKey() {
+        return $this->apiKey;
+    }
+
 }

@@ -26,7 +26,7 @@ class CardToAccountTransaction extends Transaction
             "cvv" => "",
             "expiry_year" => "",
             "expiry_month" => "",
-            "apiKey" => $this->apiKey,
+            "apiKey" => $mw->getApiKey(),
             "amount" => "",
             "fee" => "",
             "redirecturl" => "",

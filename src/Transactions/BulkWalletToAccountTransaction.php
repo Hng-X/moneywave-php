@@ -24,7 +24,7 @@ class BulkWalletToAccountTransaction extends Transaction
                 "ref" => "",
             ),
             "currency" => "NGN",
-            "apiKey" => $this->apiKey,
+            "apiKey" => $mw->getApiKey(),
             "senderName" => "",
             "ref" => "",
         );

@@ -20,7 +20,7 @@ class WalletToAccountTransaction extends Transaction
             "bankcode" => "",
             "accountNumber" => "",
             "currency" => "NGN",
-            "apiKey" => $this->apiKey,
+            "apiKey" => $mw->getApiKey(),
             "senderName" => "",
             "ref" => "",
         );
