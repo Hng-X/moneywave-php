@@ -7,7 +7,7 @@ use Moneywave\Moneywave;
 
 class CardToWalletTransaction extends Transaction
 {
-    protected $url = " /v1/transfer";
+    protected $url = "/v1/transfer";
 
     protected $data = array();
 
