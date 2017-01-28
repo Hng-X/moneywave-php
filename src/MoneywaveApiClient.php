@@ -53,7 +53,7 @@ abstract class MoneywaveApiClient {
             $this->status = $this->response["status"];
         } catch (RequestException $e) {
             $this->responseCode = $e->getCode();
-            $this->response = $e->getMessage();
+            $this->response = $e->getResponse();
             $this->status = $e->getMessage();
         }
     }
