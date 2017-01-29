@@ -44,7 +44,7 @@ abstract class MoneywaveApiClient {
     public function dispatch($method = "POST")
     {
         try {
-        $result = $this->moneywave->request($method, $this->url, array(
+            $result = $this->moneywave->request($method, $this->url, array(
             "form_params" => $this->data,
             "headers" => ["Authorization" => $this->moneywave->getToken()]
         ));
