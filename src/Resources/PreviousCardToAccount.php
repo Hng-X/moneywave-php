@@ -16,4 +16,14 @@ class PreviousCardToAccount extends Resource{
             "id" => "",
         );
     }
+
+    public function __set($key, $value)
+    {
+        if (array_key_exists($key, $this->data)) {
+            $this->data[$key] = $value;
+        }
+        if ($key === "id") {
+        	$this->url = $this->url.$value;
+        }
+    }
 }
