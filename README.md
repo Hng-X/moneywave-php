@@ -1,5 +1,6 @@
 # moneywave-php
 [![Latest Stable Version](https://poser.pugx.org/hngx/moneywave-php/v/stable)](https://packagist.org/packages/hngx/moneywave-php) [![Total Downloads](https://poser.pugx.org/hngx/moneywave-php/downloads)](https://packagist.org/packages/hngx/moneywave-php) [![License](https://poser.pugx.org/hngx/moneywave-php/license)](https://packagist.org/packages/hngx/moneywave-php) [![Latest Unstable Version](https://poser.pugx.org/hngx/moneywave-php/v/unstable)](https://packagist.org/packages/hngx/moneywave-php)
+
 PHP wrapper for the [Moneywave API](http;//moneywave.flutterwave.com/api)
 
 ## Usage
