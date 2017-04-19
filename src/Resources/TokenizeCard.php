@@ -7,7 +7,7 @@ use Moneywave\Moneywave;
 
 class TokenizeCard  extends Resource{
 
-    protected $url="/v1/transfer/charge/tokenize/card";
+    protected $url = "/v1/transfer/charge/tokenize/card";
 
     public function __construct(Moneywave $mw)
     {

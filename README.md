@@ -67,6 +67,7 @@ PreviousCardToAccount
 PreviousWalletToAccount
 RetryFailedTransaction
 ValidateAccountNumber
+TokenizeCard
 ```
 
 ### List of banks
