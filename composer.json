@@ -19,8 +19,7 @@
   ],
   "require": {
     "php": ">=5.4",
-    "guzzlehttp/guzzle": "^6.2",
-    "vlucas/phpdotenv": "^2.4"
+    "guzzlehttp/guzzle": "^6.2"
   },
   "require-dev": {},
   "autoload": {
