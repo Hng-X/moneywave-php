@@ -5,7 +5,7 @@ namespace Moneywave\Transactions;
 
 use Moneywave\Moneywave;
 
-class ChargeToCardTransaction extends Transaction
+class TotalChargeToCardTransaction extends Transaction
 {
 
     protected $url = "/v1/get-charge";

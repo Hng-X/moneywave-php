@@ -55,7 +55,7 @@ print_r($bal->getResponse());
 ```
 CardToAccountTransaction
 CardToWalletTransaction
-ChargeToCardTransaction
+TotalChargeToCardTransaction
 WalletToAccountTransaction
 BulkWalletToAccountTransaction
 ```
