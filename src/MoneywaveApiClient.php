@@ -4,6 +4,7 @@ namespace Moneywave;
 
 
 use GuzzleHttp\Exception\RequestException;
+use Moneywave\Exceptions\MoneywaveException;
 
 abstract class MoneywaveApiClient {
 
@@ -28,8 +29,8 @@ abstract class MoneywaveApiClient {
     {
         if (array_key_exists($key, $this->data)) {
             return $this->data[$key];
-        } else {
-            return "";
+        } else  {
+            throw new MoneywaveException("Unknown property $key");
         }
     }
 
@@ -37,6 +38,8 @@ abstract class MoneywaveApiClient {
     {
         if (array_key_exists($key, $this->data)) {
             $this->data[$key] = $value;
+        } else {
+            throw new MoneywaveException("Unknown property $key");
         }
     }
 
