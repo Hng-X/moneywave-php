@@ -14,9 +14,9 @@ class ValidateAccountNumber extends MoneywaveApiClient{
     public function __construct(Moneywave $mw)
     {
         parent::__construct($mw);
-        $this->data = array(
-            "account_number" => "",
-            "bank_code" => ""
+        $this->required = array(
+            "account_number",
+            "bank_code"
         );
     }
 }

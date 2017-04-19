@@ -12,10 +12,10 @@ class RetryFailedTransaction extends Resource{
     public function __construct(Moneywave $mw)
     {
         parent::__construct($mw);
-        $this->data = array(
-            "id" => "",
-            "recipient_account_number" => "",
-            "recipient_bank" => "",
+        $this->required = array(
+            "id",
+            "recipient_account_number",
+            "recipient_bank",
         );
     }
 }

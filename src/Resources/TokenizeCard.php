@@ -12,11 +12,11 @@ class TokenizeCard  extends Resource{
     public function __construct(Moneywave $mw)
     {
         parent::__construct($mw);
-        $this->data = array(
-            "card_no" => "",
-            "expiry_year" => "",
-            "expiry_month" => "",
-            "cvv" => "",
+        $this->required = array(
+            "card_no",
+            "expiry_year",
+            "expiry_month",
+            "cvv",
         );
     }
 
