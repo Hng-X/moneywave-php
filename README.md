@@ -12,10 +12,10 @@ use Moneywave\Resources\GetWalletBalance;
 use Moneywave\Bank;
 
 //Get a moneywave client instance
-$mw = new Moneywave();
+$mw = new Moneywave($publicKey, $secretKey);
 
 //get a transaction instance
-$tran = new WalletToAccountTransaction($mw);
+$tran = new WalletToAccountTransaction($mw, $walletPassword);
 
 //set details
 $tran->amount = 25000;
