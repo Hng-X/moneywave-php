@@ -65,6 +65,7 @@ abstract class MoneywaveApiClient {
             $this->response = json_decode($e->getResponse()->getBody(), true);
             $this->status = $e->getMessage();
         }
+        return $this;
     }
 
     public function getResponse()
@@ -88,5 +89,6 @@ abstract class MoneywaveApiClient {
     public function setDetails(array $data)
     {
         $this->data = $data;
+        return $this;
     }
 }

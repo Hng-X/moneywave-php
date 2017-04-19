@@ -24,6 +24,9 @@ $tran->accountNumber = "000056050";
 $tran->senderName = "Johnson";
 $tran->ref = 40;
 
+//make the transaction
+$tran->dispatch();
+
 //or you could do this in a batch
 $tran->setDetails(array(
   "amount" => 25000,
@@ -31,10 +34,8 @@ $tran->setDetails(array(
   "accountNumber" => "000056050",
   "senderName" => "Johnson",
   "ref" => 40
-));
+))->dispatch();
 
-//make the transaction
-$tran->dispatch();
 
 //note: "success" is as defined by moneywave
 if($tran->successful()) {
