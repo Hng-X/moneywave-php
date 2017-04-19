@@ -16,11 +16,11 @@ class Moneywave
     /**
      * Moneywave constructor.
      */
-    public function __construct()
+    public function __construct($publicKey, $secretKey)
     {
-        $this->apiKey = getenv('MONEYWAVE_PUBLIC_KEY');
-        $this->secretkey = getenv('MONEYWAVE_SECRET_KEY');
-        $this->baseUrl = getenv('MONEYWAVE_BASE_URL');
+        $this->apiKey = $publicKey;
+        $this->secretkey = $secretKey;
+        $this->baseUrl = "https://moneywave.herokuapp.com";
         $this->client = new Client([
             'base_uri' => $this->baseUrl,
         ]);
@@ -58,7 +58,7 @@ class Moneywave
 
     public function request($method, $url, $options)
     {
-        return $this->client->request($method, getenv("MONEYWAVE_BASE_URL").$url, $options);
+        return $this->client->request($method, "https://moneywave.herokuapp.com".$url, $options);
     }
 
     public function getClient() {

@@ -11,11 +11,11 @@ class WalletToAccountTransaction extends Transaction
 
     protected $data = array();
 
-    public function __construct(Moneywave $mw)
+    public function __construct(Moneywave $mw, $password)
     {
         parent::__construct($mw);
         $this->data = array(
-            "lock" => getenv("MONEYWAVE_WALLET_PASSWORD"),
+            "lock" => $password,
             "amount" => "",
             "bankcode" => "",
             "accountNumber" => "",
