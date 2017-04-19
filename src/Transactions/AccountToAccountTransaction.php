@@ -6,8 +6,7 @@ namespace Moneywave\Transactions;
 use Moneywave\Moneywave;
 use Moneywave\Traits\NeedsValidation;
 
-class CardToAccountTransaction extends Transaction
-{
+class AccountToAccountTransaction extends Transaction{
 
     use NeedsValidation;
 
