@@ -14,8 +14,10 @@ class RetryFailedTransaction extends Resource{
         parent::__construct($mw);
         $this->required = array(
             "id",
+        );
+        $this->optional = [
             "recipient_account_number",
             "recipient_bank",
-        );
+        ];
     }
 }

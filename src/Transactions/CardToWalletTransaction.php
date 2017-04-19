@@ -24,13 +24,16 @@ class CardToWalletTransaction extends Transaction
             "amount",
             "fee",
             "redirecturl",
+
+        );
+        $this->optional = [
             "chargeCurrency",
             "disburseCurrency",
             "charge_with",
             "card_last4",
             "sender_account_number",
             "sender_bank",
-        );
+        ];
         $this->data = [
             "recipient" => "wallet",
             "apiKey" => $mw->getApiKey(),

@@ -27,15 +27,23 @@ class CardToAccountTransaction extends Transaction
             "amount",
             "fee",
             "redirecturl",
+        );
+        $this->optional = array(
+            "recipient",
+            "recipient_id",
+            "recipients",
+            "pin",
             "chargeCurrency",
             "disburseCurrency",
             "charge_with",
             "card_last4",
             "sender_account_number",
             "sender_bank",
-        );
-        $this->optional = array(
-            "recipient_id",
+            "passcode",
+            "card_id",
+            "cycle",
+            "startDate",
+            "endDate",
         );
 
         $this->data = [
