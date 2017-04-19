@@ -9,178 +9,178 @@ class Bank
      * FIRST CITY MONUMENT BANK PLC
      *
      */
-    static $FCMB = "214";
+    static const FCMB = "214";
 
 
     /**
      * UNITY BANK PLC
      *
      */
-    static $UNITY = "215";
+    static const UNITY = "215";
 
     /**
      * STANBIC IBTC BANK PLC
      *
      */
-    static $STANBIC_IBTC = "221";
+    static const STANBIC_IBTC = "221";
 
     /**
      * STERLING BANK PLC
      *
      */
-    static $STERLING = "232";
+    static const STERLING = "232";
 
     /**
      * STANBIC Mobile PLC
      *
      */
-    static $STANBIC_MOBILE = "304";
+    static const STANBIC_MOBILE = "304";
 
     /**
      * PAYCOM
      *
      */
-    static $PAYCOM = "305";
+    static const PAYCOM = "305";
 
     /**
      * ECOBANK MOBILE
      *
      */
-    static $ECOBANK_MOBILE = "307";
+    static const ECOBANK_MOBILE = "307";
 
     /**
      * FBN MOBILE
      *
      */
-    static $FBN_MOBILE = "309";
+    static const FBN_MOBILE = "309";
 
     /**
      * PARKWAY
      *
      */
-    static $PARKWAY = "311";
+    static const PARKWAY = "311";
 
     /**
      * GTBank Mobile Money
      *
      */
-    static $GTBANK_MOBILE = "315";
+    static const GTBANK_MOBILE = "315";
 
     /**
      * ZENITH Mobile
      *
      */
-    static $ZENITH_MOBILE = "322";
+    static const ZENITH_MOBILE = "322";
 
     /**
      * ACCESS Mobile
      *
      */
-    static $ACCESS_MOBILE = "323";
+    static const ACCESS_MOBILE = "323";
 
     /**
      * Aso Savings and Loans
      *
      */
-    static $ASO = "401";
+    static const ASO = "401";
 
     /**
      * ACCESS BANK NIGERIA
      *
      */
-    static $ACCESS = "044";
+    static const ACCESS = "044";
 
     /**
      * AFRIBANK NIGERIA PLC
      *
      */
-    static $AFRIBANK = "014";
+    static const AFRIBANK = "014";
 
     /**
      * DIAMOND BANK PLC
      *
      */
-    static $DIAMOND = "063";
+    static const DIAMOND = "063";
 
     /**
      * ECOBANK NIGERIA PLC
      *
      */
-    static $ECOBANK = "050";
+    static const ECOBANK = "050";
 
     /**
      * ENTERPRISE BANK LIMITED
      *
      */
-    static $ENTERPRISE = "084";
+    static const ENTERPRISE = "084";
 
     /**
      * FIDELITY BANK PLC
      *
      */
-    static $FIDELITY = "070";
+    static const FIDELITY = "070";
 
 
     /**
      * FIRST BANK PLC
      *
      */
-    static $FIRST = "011";
+    static const FIRST = "011";
 
     /**
      * GTBANK PLC
      *
      */
-    static $GTBANK = "058";
+    static const GTBANK = "058";
 
     /**
      * HERITAGE BANK
      *
      */
-    static $HERITAGE = "030";
+    static const HERITAGE = "030";
 
     /**
      * KEYSTONE BANK PLC
      *
      */
-    static $KEYSTONE = "082";
+    static const KEYSTONE = "082";
 
 
     /**
      * SKYE BANK PLC
      *
      */
-    static $SKYE = "076";
+    static const SKYE = "076";
 
     /**
      * STANDARD CHARTERED BANK NIGERIA LIMITED
      *
      */
-    static $STANDARD_CHARTERED = "068";
+    static const STANDARD_CHARTERED = "068";
 
 
     /**
      * UNION BANK OF NIGERIA PLC
      *
      */
-    static $UNION = "032";
+    static const UNION = "032";
 
     /**
      * UNITED BANK FOR AFRICA PLC
      *
      */
-    static $UBA = "033";
+    static const UBA = "033";
 
     /**
      * WEMA BANK PLC
      *
      */
-    static $WEMA = "035";
+    static const WEMA = "035";
 
     /**
      * ZENITH BANK PLC
      *
      */
-    static $ZENITH = "057";
+    static const ZENITH = "057";
 
 }

@@ -19,7 +19,7 @@ $tran = new WalletToAccountTransaction($mw, $walletPassword);
 
 //set details
 $tran->amount = 25000;
-$tran->bankcode = Bank::$STERLING;
+$tran->bankcode = Bank::STERLING;
 $tran->accountNumber = "000056050";
 $tran->senderName = "Johnson";
 $tran->ref = 40;
@@ -27,7 +27,7 @@ $tran->ref = 40;
 //or you could do this in a batch
 $tran->setDetails(array(
   "amount" => 25000,
-  "bankcode" => Bank::$STERLING,
+  "bankcode" => Bank::STERLING,
   "accountNumber" => "000056050",
   "senderName" => "Johnson",
   "ref" => 40
