@@ -14,6 +14,10 @@ abstract class MoneywaveApiClient {
 
     protected $url = "";
 
+    protected $required = array();
+
+    protected $optional = array();
+
     protected $data = array();
 
     protected $responseCode;
@@ -29,7 +33,7 @@ abstract class MoneywaveApiClient {
     {
         if (array_key_exists($key, $this->data)) {
             return $this->data[$key];
-        } else  {
+        } else {
             throw new MoneywaveException("Unknown property $key");
         }
     }
@@ -37,6 +41,8 @@ abstract class MoneywaveApiClient {
     public function __set($key, $value)
     {
         if (array_key_exists($key, $this->data)) {
+            $this->data[$key] = $value;
+        } else if (in_array($key, $this->required) || in_array($key, $this->optional)) {
             $this->data[$key] = $value;
         } else {
             throw new MoneywaveException("Unknown property $key");

@@ -10,8 +10,6 @@ class WalletToAccountTransaction extends Transaction
 {
     protected $url = "/v1/disburse";
 
-    protected $data = array();
-
     public function __construct(Moneywave $mw, $password = "")
     {
         parent::__construct($mw);
@@ -22,15 +20,19 @@ class WalletToAccountTransaction extends Transaction
                 throw new MoneywaveException("No wallet password supplied.");
             }
         }
-        $this->data = array(
+
+        $this->required = array(
             "lock" => $password,
-            "amount" => "",
-            "bankcode" => "",
-            "accountNumber" => "",
+            "amount",
+            "bankcode",
+            "accountNumber",
+            "senderName",
+            "ref",
+        );
+
+        $this->data = [
             "currency" => "NGN",
             "apiKey" => $mw->getApiKey(),
-            "senderName" => "",
-            "ref" => "",
-        );
+        ];
     }
 }
