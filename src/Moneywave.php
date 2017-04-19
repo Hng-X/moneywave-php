@@ -16,10 +16,21 @@ class Moneywave
     /**
      * Moneywave constructor.
      */
-    public function __construct($publicKey, $secretKey)
+    public function __construct($apiKey, $secretKey)
     {
-        $this->apiKey = $publicKey;
-        $this->secretkey = $secretKey;
+        if (func_num_args() == 0) {
+            $this->apiKey = getenv("MONEYWAVE_API_KEY");
+            $this->secretkey = getenv("MONEYWAVE_SECRET_KEY");
+            if (!($this->apiKey)) {
+                throw new MoneywaveException("No api key given.");
+            } else if (!($this->secretkey)) {
+                throw new MoneywaveException("No secret key given.");
+            }
+        } else {
+            $this->apiKey = $apiKey;
+            $this->secretkey = $secretKey;
+        }
+
         $this->baseUrl = "https://moneywave.herokuapp.com";
         $this->client = new Client([
             'base_uri' => $this->baseUrl,
