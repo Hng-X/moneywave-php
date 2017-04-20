@@ -1,10 +1,10 @@
 <?php
 
-namespace Moneywave\Resources;
+namespace HngX\Moneywave\Resources;
 
 
-use Moneywave\Moneywave;
-use Moneywave\MoneywaveApiClient;
+use HngX\Moneywave\Moneywave;
+use HngX\Moneywave\MoneywaveApiClient;
 
 class ValidateAccountNumber extends MoneywaveApiClient{
     protected $url = "/v1/resolve/account";

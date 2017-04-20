@@ -1,9 +1,9 @@
 <?php
 
-namespace Moneywave\Resources;
+namespace HngX\Moneywave\Resources;
 
 
-use Moneywave\Moneywave;
+use HngX\Moneywave\Moneywave;
 
 class TokenizeCard  extends Resource{
 

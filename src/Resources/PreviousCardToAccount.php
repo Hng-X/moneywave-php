@@ -1,10 +1,10 @@
 <?php
 
-namespace Moneywave\Resources;
+namespace HngX\Moneywave\Resources;
 
 
-use Moneywave\Exceptions\MoneywaveException;
-use Moneywave\Moneywave;
+use HngX\Moneywave\Exceptions\MoneywaveException;
+use HngX\Moneywave\Moneywave;
 
 class PreviousCardToAccount extends Resource{
     protected $url="/v1/transfer/";

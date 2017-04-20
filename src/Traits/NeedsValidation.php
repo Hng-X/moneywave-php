@@ -1,6 +1,6 @@
 <?php
 
-namespace Moneywave\Traits;
+namespace HngX\Moneywave\Traits;
 
 
 use GuzzleHttp\Exception\RequestException;

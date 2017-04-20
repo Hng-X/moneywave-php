@@ -1,9 +1,9 @@
 <?php
 
-namespace Moneywave\Transactions;
+namespace HngX\Moneywave\Transactions;
 
 
-use Moneywave\MoneywaveApiClient;
+use HngX\Moneywave\MoneywaveApiClient;
 
 class Transaction extends MoneywaveApiClient
 {

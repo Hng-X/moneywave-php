@@ -24,7 +24,7 @@
   "require-dev": {},
   "autoload": {
     "psr-4": {
-      "Moneywave\\": "src"
+      "HngX\\Moneywave\\": "src"
     }
   }
 }

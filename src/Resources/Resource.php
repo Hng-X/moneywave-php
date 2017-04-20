@@ -1,9 +1,9 @@
 <?php
 
-namespace Moneywave\Resources;
+namespace HngX\Moneywave\Resources;
 
 
-use Moneywave\MoneywaveApiClient;
+use HngX\Moneywave\MoneywaveApiClient;
 
 class Resource extends MoneywaveApiClient{
 

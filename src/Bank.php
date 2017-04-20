@@ -1,6 +1,6 @@
 <?php
 
-namespace Moneywave;
+namespace HngX\Moneywave;
 
 
 class Bank

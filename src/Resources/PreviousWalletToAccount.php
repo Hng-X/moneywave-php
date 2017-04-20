@@ -1,9 +1,9 @@
 <?php
 
-namespace Moneywave\Resources;
+namespace HngX\Moneywave\Resources;
 
 
-use Moneywave\Moneywave;
+use HngX\Moneywave\Moneywave;
 
 class PreviousWalletToAccount  extends Resource{
     protected $url="/v1/disburse/status";

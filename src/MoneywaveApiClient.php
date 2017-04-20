@@ -1,10 +1,10 @@
 <?php
 
-namespace Moneywave;
+namespace HngX\Moneywave;
 
 
 use GuzzleHttp\Exception\RequestException;
-use Moneywave\Exceptions\MoneywaveException;
+use \HngX\Moneywave\Exceptions\MoneywaveException;
 
 abstract class MoneywaveApiClient {
 

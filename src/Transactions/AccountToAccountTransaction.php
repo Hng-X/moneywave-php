@@ -1,10 +1,10 @@
 <?php
 
-namespace Moneywave\Transactions;
+namespace HngX\Moneywave\Transactions;
 
 
-use Moneywave\Moneywave;
-use Moneywave\Traits\NeedsValidation;
+use HngX\Moneywave\Moneywave;
+use HngX\Moneywave\Traits\NeedsValidation;
 
 class AccountToAccountTransaction extends Transaction{
 

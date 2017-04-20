@@ -1,9 +1,9 @@
 <?php
 
-namespace Moneywave\Transactions;
+namespace HngX\Moneywave\Transactions;
 
 
-use Moneywave\Moneywave;
+use HngX\Moneywave\Moneywave;
 
 class CardToWalletTransaction extends Transaction
 {

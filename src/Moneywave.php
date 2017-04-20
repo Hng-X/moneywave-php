@@ -1,9 +1,9 @@
 <?php
 
-namespace Moneywave;
+namespace HngX\Moneywave;
 
 use GuzzleHttp\Client;
-use Moneywave\Exceptions\MoneywaveException;
+use HngX\Moneywave\Exceptions\MoneywaveException;
 
 class Moneywave
 {

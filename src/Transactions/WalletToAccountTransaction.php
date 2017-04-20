@@ -1,10 +1,10 @@
 <?php
 
-namespace Moneywave\Transactions;
+namespace HngX\Moneywave\Transactions;
 
 
-use Moneywave\Exceptions\MoneywaveException;
-use Moneywave\Moneywave;
+use HngX\Moneywave\Exceptions\MoneywaveException;
+use HngX\Moneywave\Moneywave;
 
 class WalletToAccountTransaction extends Transaction
 {
