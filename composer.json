@@ -2,7 +2,7 @@
   "name": "hngx/moneywave-php",
   "description": "PHP wrapper for the Moneywave API",
   "license": "MIT",
-  "keywords": ["Moneywave"],
+  "keywords": ["moneywave", "flutterwave", "fintech"],
   "authors": [
     {
       "name": "Shalvah Adebayo",
