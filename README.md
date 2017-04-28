@@ -56,7 +56,7 @@ Here is an example:
 ```php
 
 //we want to perform a wallet to account transfer
-$tran = new \HngX\Moneywave\Transaction\WalletToAccountTransaction($mw, $walletPassword);
+$tran = new \HngX\Moneywave\Transactions\WalletToAccountTransaction($mw, $walletPassword);
 
 //set details
 $tran->amount = 25000;
