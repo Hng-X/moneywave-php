@@ -18,17 +18,7 @@ To carry out a transaction or access a resource, you will need an instance of th
 This will be used for your API calls.
 
 ```php
-$mw = new \HngX\Moneywave\Moneywave($youApiKey, $yourSecretKey);
-```
-
-Alternatively, if you are using the vlucas/phpdotenv library, you cann save these values to your `.env` file:
-```env
-MONEYWAVE_API_KEY=your-api-key-here
-MONEYWAVE_SECRET_KEY=your-secret-key-here
-```
-And then they automatically get used:
-```php
-$mw = new \HngX\Moneywave\Moneywave(); //works too!
+$mw = new \HngX\Moneywave\Moneywave($yourApiKey, $yourSecretKey);
 ```
 
 ## <a name="usage1">Usage: Dispatching Transactions/Resources</a>
