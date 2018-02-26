@@ -16,20 +16,10 @@ class Moneywave
     /**
      * Moneywave constructor.
      */
-    public function __construct($apiKey = null, $secretKey = null)
+    public function __construct($apiKey, $secretKey)
     {
-        if (!($this->apiKey = $apiKey)) {
-            $this->apiKey = getenv("MONEYWAVE_API_KEY");
-        }
-        if (!($this->secretkey = $secretKey)) {
-            $this->secretkey = getenv("MONEYWAVE_SECRET_KEY");
-        }
-
-        if (!($this->apiKey)) {
-            throw new MoneywaveException("No api key given.");
-        } else if (!($this->secretkey)) {
-            throw new MoneywaveException("No secret key given.");
-        }
+        $this->apiKey = $apiKey;
+        $this->secretkey = $secretKey;
 
         $this->baseUrl = "https://moneywave.herokuapp.com";
         $this->client = new Client([
@@ -51,8 +41,7 @@ class Moneywave
     /*
     * Get Moneywave access token
     */
-    private
-    function getAccessToken()
+    private function getAccessToken()
     {
         $response = $this->client->post('/v1/merchant/verify', [
             'form_params' => [
@@ -64,30 +53,26 @@ class Moneywave
         if ($response["status"] == "success") {
             return $response['token'];
         } else {
-            throw new MoneywaveException("Authentication failed: " . print_r($response));
+            throw new MoneywaveException("Authentication failed: " . print_r($response, true));
         }
     }
 
-    public
-    function request($method, $url, $options)
+    public function request($method, $url, $options)
     {
-        return $this->client->request($method, "https://moneywave.herokuapp.com" . $url, $options);
+        return $this->client->request($method, "https://moneywave.herokuapp.com". $url, $options);
     }
 
-    public
-    function getClient()
+    public function getClient()
     {
         return $this->client;
     }
 
-    public
-    function getToken()
+    public function getToken()
     {
         return $this->accessToken;
     }
 
-    public
-    function getApiKey()
+    public function getApiKey()
     {
         return $this->apiKey;
     }
